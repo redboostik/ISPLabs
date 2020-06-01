@@ -1,0 +1,7 @@
+C:\Users\User\source\repos\Lab4Task2\Lab4Task2\bin\Debug\Lab4Task2.exe.config
+C:\Users\User\source\repos\Lab4Task2\Lab4Task2\bin\Debug\Lab4Task2.exe
+C:\Users\User\source\repos\Lab4Task2\Lab4Task2\bin\Debug\Lab4Task2.pdb
+C:\Users\User\source\repos\Lab4Task2\Lab4Task2\obj\Debug\Lab4Task2.csprojAssemblyReference.cache
+C:\Users\User\source\repos\Lab4Task2\Lab4Task2\obj\Debug\Lab4Task2.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Lab4Task2\Lab4Task2\obj\Debug\Lab4Task2.exe
+C:\Users\User\source\repos\Lab4Task2\Lab4Task2\obj\Debug\Lab4Task2.pdb

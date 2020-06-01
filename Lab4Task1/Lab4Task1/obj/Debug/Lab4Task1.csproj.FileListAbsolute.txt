@@ -1,0 +1,10 @@
+C:\Users\User\source\repos\Lab4Task1\Lab4Task1\bin\Debug\Lab4Task1.exe.config
+C:\Users\User\source\repos\Lab4Task1\Lab4Task1\bin\Debug\Lab4Task1.exe
+C:\Users\User\source\repos\Lab4Task1\Lab4Task1\bin\Debug\Lab4Task1.pdb
+C:\Users\User\source\repos\Lab4Task1\Lab4Task1\obj\Debug\Lab4Task1.csprojAssemblyReference.cache
+C:\Users\User\source\repos\Lab4Task1\Lab4Task1\obj\Debug\Lab4Task1.Properties.Resources.resources
+C:\Users\User\source\repos\Lab4Task1\Lab4Task1\obj\Debug\Lab4Task1.csproj.GenerateResource.cache
+C:\Users\User\source\repos\Lab4Task1\Lab4Task1\obj\Debug\Lab4Task1.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Lab4Task1\Lab4Task1\obj\Debug\Lab4Task1.exe
+C:\Users\User\source\repos\Lab4Task1\Lab4Task1\obj\Debug\Lab4Task1.pdb
+C:\Users\User\source\repos\Lab4Task1\Lab4Task1\obj\Debug\Lab4Task1.Form1.resources
