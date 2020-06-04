@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lab5Task1
+namespace Lab6Task1
 {
     public abstract class Transport
     {

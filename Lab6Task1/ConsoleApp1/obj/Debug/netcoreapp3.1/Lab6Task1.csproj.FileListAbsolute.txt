@@ -1,0 +1,13 @@
+D:\GitHub\ISP\ISPLabs\LAb6Task1\ConsoleApp1\bin\Debug\netcoreapp3.1\Lab6Task1.exe
+D:\GitHub\ISP\ISPLabs\LAb6Task1\ConsoleApp1\bin\Debug\netcoreapp3.1\Lab6Task1.deps.json
+D:\GitHub\ISP\ISPLabs\LAb6Task1\ConsoleApp1\bin\Debug\netcoreapp3.1\Lab6Task1.runtimeconfig.json
+D:\GitHub\ISP\ISPLabs\LAb6Task1\ConsoleApp1\bin\Debug\netcoreapp3.1\Lab6Task1.runtimeconfig.dev.json
+D:\GitHub\ISP\ISPLabs\LAb6Task1\ConsoleApp1\bin\Debug\netcoreapp3.1\Lab6Task1.dll
+D:\GitHub\ISP\ISPLabs\LAb6Task1\ConsoleApp1\bin\Debug\netcoreapp3.1\Lab6Task1.pdb
+D:\GitHub\ISP\ISPLabs\LAb6Task1\ConsoleApp1\obj\Debug\netcoreapp3.1\Lab6Task1.csprojAssemblyReference.cache
+D:\GitHub\ISP\ISPLabs\LAb6Task1\ConsoleApp1\obj\Debug\netcoreapp3.1\Lab6Task1.AssemblyInfoInputs.cache
+D:\GitHub\ISP\ISPLabs\LAb6Task1\ConsoleApp1\obj\Debug\netcoreapp3.1\Lab6Task1.AssemblyInfo.cs
+D:\GitHub\ISP\ISPLabs\LAb6Task1\ConsoleApp1\obj\Debug\netcoreapp3.1\Lab6Task1.csproj.CoreCompileInputs.cache
+D:\GitHub\ISP\ISPLabs\LAb6Task1\ConsoleApp1\obj\Debug\netcoreapp3.1\Lab6Task1.dll
+D:\GitHub\ISP\ISPLabs\LAb6Task1\ConsoleApp1\obj\Debug\netcoreapp3.1\Lab6Task1.pdb
+D:\GitHub\ISP\ISPLabs\LAb6Task1\ConsoleApp1\obj\Debug\netcoreapp3.1\Lab6Task1.genruntimeconfig.cache

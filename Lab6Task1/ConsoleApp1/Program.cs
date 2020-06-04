@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lab5Task1
+namespace Lab6Task1
 {
     class Program
     {
@@ -45,14 +45,38 @@ namespace Lab5Task1
             new Auto(((Ferrari.ModelFerrari)5).ToString(), 1485, 1937, 4527, 325, (Transport.typeTransport)4, 4, 2, 1606,
                 (Auto.AutoType)3, new Auto.Engine((Auto.Engine.TypeEngine)1, 8, 3, 570, 6000, 4499, 7.8)),
         };
-       
+
+        static int EnterIntWithRange(int left, int right)
+        {
+            int index = 0;
+            bool flag = true;
+            while (flag)
+            {
+                flag = false;
+                try
+                {
+                    index = Convert.ToInt32(Console.ReadLine());
+                    if (index < left || index > right)
+                    {
+                        Console.WriteLine($"Wrong input. Try Again in range {left}, {right} ");
+                        flag = true;
+                    }
+                }
+                catch (Exception)
+                {
+                    flag = true;
+                    Console.WriteLine($"Wrong input. Try Again in range {left}, {right} ");
+                }
+            }
+            return index;
+        }
 
         static void InfoCars()
         {
-            while(true)
+            while (true)
             {
-                Console.WriteLine("Menu:\n1 info about cars\n2 full info by index\n3 exit\n");
-                int choose = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Menu:\n1 info about cars\n2 full info by index\n3 race\n4 sort Cars by average speed\n5 exit\n");
+                int choose = EnterIntWithRange(1, 5);
                 if (choose == 1)
                 {
                     foreach (var x in Cars)
@@ -63,16 +87,34 @@ namespace Lab5Task1
                 else
                 if (choose == 2)
                 {
-                    int index = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Enter index");
+                    int index = EnterIntWithRange(0, Cars.Count - 1);
                     Cars[index].outInfo();
                 }
-                else break;   
+                else
+                if (choose == 3)
+                {
+                    Console.WriteLine("Enter index of first car");
+                    int firstIndex = EnterIntWithRange(0, Cars.Count - 1);
+                    Console.WriteLine("Enter index of first car");
+                    int secondIndex = EnterIntWithRange(0, Cars.Count - 1);
+                    int flagCheck = Cars[firstIndex].CompareTo(Cars[secondIndex]);
+                    if (flagCheck == 1) Console.WriteLine($"Win {Cars[firstIndex].name}\n");
+                    if (flagCheck == -1) Console.WriteLine($"Win {Cars[secondIndex].name}\n");
+                    if (flagCheck == 0) Console.WriteLine("The race ended in a draw\n");
+                }
+                else
+                if(choose == 4)
+                {
+                    Cars.Sort();
+                }
+                else break;
             }
         }
         static void Main(string[] args)
         {
             InfoCars();
-            
+
         }
     }
 }
