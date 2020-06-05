@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CBxzLMt+x/pPpxYOMMzzp3jLeOdiQzm/6GOXi9l8ntSX8rBN5Tyfj/5s+ZIzzgHR3t+EjFLgUElQL5o+v0gprA==",
+  "dgSpecHash": "0smny1ArHyXXolVTzWzf0N+La/ir6hW8uFSl9bf3lCl8kPh+bv3r+DukWV2BneE+eyqOF1Tf13SOUv4lxqGX7Q==",
   "success": true,
-  "projectFilePath": "D:\\GitHub\\ISP\\ISPLabs\\Lab6Task1\\ConsoleApp1\\Lab6Task1.csproj",
+  "projectFilePath": "C:\\Users\\User\\source\\repos\\Lab8Task1\\Lab8Task1\\Lab8Task1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",

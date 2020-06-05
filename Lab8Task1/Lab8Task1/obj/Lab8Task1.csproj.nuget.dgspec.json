@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GitHub\\ISP\\ISPLabs\\Lab6Task1\\ConsoleApp1\\Lab6Task1.csproj": {}
+    "C:\\Users\\User\\source\\repos\\Lab8Task1\\Lab8Task1\\Lab8Task1.csproj": {}
   },
   "projects": {
-    "D:\\GitHub\\ISP\\ISPLabs\\Lab6Task1\\ConsoleApp1\\Lab6Task1.csproj": {
+    "C:\\Users\\User\\source\\repos\\Lab8Task1\\Lab8Task1\\Lab8Task1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub\\ISP\\ISPLabs\\Lab6Task1\\ConsoleApp1\\Lab6Task1.csproj",
-        "projectName": "Lab6Task1",
-        "projectPath": "D:\\GitHub\\ISP\\ISPLabs\\Lab6Task1\\ConsoleApp1\\Lab6Task1.csproj",
+        "projectUniqueName": "C:\\Users\\User\\source\\repos\\Lab8Task1\\Lab8Task1\\Lab8Task1.csproj",
+        "projectName": "Lab8Task1",
+        "projectPath": "C:\\Users\\User\\source\\repos\\Lab8Task1\\Lab8Task1\\Lab8Task1.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\ISP\\ISPLabs\\Lab6Task1\\ConsoleApp1\\obj\\",
+        "outputPath": "C:\\Users\\User\\source\\repos\\Lab8Task1\\Lab8Task1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
