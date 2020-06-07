@@ -146,10 +146,8 @@ namespace Lab8Task1
             }
         }
 
-        public static void outMessage(string message)
-        {
-            Console.WriteLine(message);
-        }
+        public static void outMessage(string message) => Console.WriteLine(message);
+
         static void Main(string[] args)
         {
             InfoCars();
