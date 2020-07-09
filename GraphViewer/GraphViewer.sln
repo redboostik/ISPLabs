@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29920.165
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphViewer", "GraphViewer\GraphViewer.csproj", "{A0B431A7-5389-4CF8-9382-19629344E18D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A0B431A7-5389-4CF8-9382-19629344E18D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0B431A7-5389-4CF8-9382-19629344E18D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0B431A7-5389-4CF8-9382-19629344E18D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0B431A7-5389-4CF8-9382-19629344E18D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ECD100F8-F950-4075-8E6B-77C96EC78D23}
+	EndGlobalSection
+EndGlobal
