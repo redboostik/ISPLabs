@@ -1,0 +1,13 @@
+C:\Users\User\source\repos\lab1_FileManager\lab1_FileManager\bin\Debug\lab1_FileManager.exe.config
+C:\Users\User\source\repos\lab1_FileManager\lab1_FileManager\bin\Debug\lab1_FileManager.exe
+C:\Users\User\source\repos\lab1_FileManager\lab1_FileManager\bin\Debug\lab1_FileManager.pdb
+C:\Users\User\source\repos\lab1_FileManager\lab1_FileManager\obj\Debug\lab1_FileManager.csprojAssemblyReference.cache
+C:\Users\User\source\repos\lab1_FileManager\lab1_FileManager\obj\Debug\lab1_FileManager.Form1.resources
+C:\Users\User\source\repos\lab1_FileManager\lab1_FileManager\obj\Debug\lab1_FileManager.Properties.Resources.resources
+C:\Users\User\source\repos\lab1_FileManager\lab1_FileManager\obj\Debug\lab1_FileManager.csproj.GenerateResource.cache
+C:\Users\User\source\repos\lab1_FileManager\lab1_FileManager\obj\Debug\lab1_FileManager.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\lab1_FileManager\lab1_FileManager\obj\Debug\lab1_FileManager.exe
+C:\Users\User\source\repos\lab1_FileManager\lab1_FileManager\obj\Debug\lab1_FileManager.pdb
+C:\Users\User\source\repos\lab1_FileManager\lab1_FileManager\obj\Debug\lab1_FileManager.textReader.resources
+C:\Users\User\source\repos\lab1_FileManager\lab1_FileManager\obj\Debug\lab1_FileManager.NewFile.resources
+C:\Users\User\source\repos\lab1_FileManager\lab1_FileManager\obj\Debug\lab1_FileManager.NewFolder.resources
