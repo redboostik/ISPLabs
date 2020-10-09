@@ -36,13 +36,13 @@ namespace lab1_FileManager
                 MessageBox.Show("Wrong Name");
                 return;
             }
-            if(File.Exists(path + "/" + textBox1.Text))
+            if(File.Exists(newPath))
             {
                 MessageBox.Show("File with this name already exists");
                 return;
             }
             
-            FileStream file = File.Create(path + "\\" + textBox1.Text);
+            FileStream file = File.Create(newPath);
             file.Close();
 
             parent.GoToListBox1(Directory.GetDirectories(path).Concat(Directory.GetFiles(path)).ToArray());

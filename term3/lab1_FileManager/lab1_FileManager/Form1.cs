@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.IO.Compression;
 
 namespace lab1_FileManager
 {
@@ -65,7 +66,6 @@ namespace lab1_FileManager
             
             if (path != "")
             {
-                MessageBox.Show(path);
                 if (Directory.Exists(path)) GoToListBox1(Directory.GetDirectories(path).Concat(Directory.GetFiles(path)).ToArray());
                 else
                 if(File.Exists(path))
@@ -103,7 +103,9 @@ namespace lab1_FileManager
                 return;
             }else
             {
-                string delPath = path + listBox1.Items[index].ToString();
+                string delPath = path;
+                if (delPath != "") if (delPath[delPath.Length - 1] != '\\' || delPath[delPath.Length - 1] != '/') delPath += '\\'; 
+                delPath += listBox1.Items[index].ToString();
                 if (Directory.Exists(delPath))
                 {
                     try
@@ -135,6 +137,113 @@ namespace lab1_FileManager
                 }
             }
 
+        }
+
+        private void compressToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int index = listBox1.SelectedIndex;
+            if (index <= 0)
+            {
+                MessageBox.Show("Compressing failed. The file/folder to compress is not selected.");
+                return;
+            }
+            else
+            {
+                string compressPath = path;
+                if (compressPath != "") if (compressPath[compressPath.Length - 1] != '\\' || compressPath[compressPath.Length - 1] != '/') compressPath += '\\';
+                string newCompressPath = compressPath;
+                compressPath += listBox1.Items[index].ToString();
+
+                if (File.Exists(compressPath))
+                {
+                    newCompressPath += listBox1.Items[index].ToString().Insert(
+                        listBox1.Items[index].ToString().LastIndexOf('.') > 0 ? listBox1.Items[index].ToString().LastIndexOf('.') + 1 : (listBox1.Items[index].ToString().Length), "NEWCOMPRESSFILE");
+                    if(File.Exists(newCompressPath))
+                    {
+                        MessageBox.Show("File with this name already compressed");
+                        return;
+                    }
+                    try
+                    {
+                        using (FileStream sourceStream = new FileStream(compressPath, FileMode.OpenOrCreate))
+                        {
+                            using (FileStream targetStream = File.Create(newCompressPath))
+                            {
+                                using (GZipStream compressionStream = new GZipStream(targetStream, CompressionMode.Compress))
+                                {
+                                    sourceStream.CopyTo(compressionStream);
+                                }
+                            }
+                        }
+                    }
+                    catch (Exception ee)
+                    {
+                        MessageBox.Show("Compressing failed. The file to compress is not exists.");
+                    }
+                    GoToListBox1(Directory.GetDirectories(path).Concat(Directory.GetFiles(path)).ToArray());
+                }
+                else
+                {
+                    MessageBox.Show("Invalid file/folder path.The object may have been deleted");
+                    GoToListBox1(Directory.GetDirectories(path).Concat(Directory.GetFiles(path)).ToArray());
+                }
+            }
+        }
+
+        private void decompressToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int index = listBox1.SelectedIndex;
+            if (index <= 0)
+            {
+                MessageBox.Show("Compressing failed. The file/folder to compress is not selected.");
+                return;
+            }
+            else
+            {
+                string decompressPath = path;
+                if (decompressPath != "") if (decompressPath[decompressPath.Length - 1] != '\\' || decompressPath[decompressPath.Length - 1] != '/') decompressPath += '\\';
+                string newDecompressPath = decompressPath;
+                decompressPath += listBox1.Items[index].ToString();
+                MessageBox.Show(decompressPath);
+                if (File.Exists(decompressPath))
+                {
+                    if(listBox1.Items[index].ToString().LastIndexOf("NEWCOMPRESSFILE") <= listBox1.Items[index].ToString().LastIndexOf('.'))
+                    {
+                        MessageBox.Show("This file not compressed");
+                        return;
+                    }
+                    newDecompressPath += listBox1.Items[index].ToString().Remove(listBox1.Items[index].ToString().LastIndexOf("NEWCOMPRESSFILE"), "NEWCOMPRESSFILE".Length);
+                    MessageBox.Show(newDecompressPath);
+                    if (File.Exists(newDecompressPath))
+                    {
+                        MessageBox.Show("File with this name already decompressed");
+                        return;
+                    }
+                    try
+                    {
+                        using (FileStream sourceStream = new FileStream(decompressPath, FileMode.OpenOrCreate))
+                        {
+                            using (FileStream targetStream = File.Create(newDecompressPath))
+                            {
+                                using (GZipStream decompressionStream = new GZipStream(sourceStream, CompressionMode.Decompress))
+                                {
+                                    decompressionStream.CopyTo(targetStream);
+                                }
+                            }
+                        }
+                    }
+                    catch (Exception ee)
+                    {
+                        MessageBox.Show("decompressing failed. The file to compress is not exists.");
+                    }
+                    GoToListBox1(Directory.GetDirectories(path).Concat(Directory.GetFiles(path)).ToArray());
+                }
+                else
+                {
+                    MessageBox.Show("Invalid file/folder path.The object may have been deleted");
+                    GoToListBox1(Directory.GetDirectories(path).Concat(Directory.GetFiles(path)).ToArray());
+                }
+            }
         }
     }
 }

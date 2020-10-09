@@ -25,7 +25,7 @@ namespace lab1_FileManager
             myFile.Close();
         }
 
-        private void toolStripDropDownButton1_Click(object sender, EventArgs e)
+        private void toolStripButton1_Click(object sender, EventArgs e)
         {
             try
             {
@@ -34,7 +34,8 @@ namespace lab1_FileManager
                 byte[] info = Encoding.ASCII.GetBytes(textBox1.Text);
                 myFile.Write(info, 0, info.Length);
                 myFile.Close();
-            }catch(Exception)
+            }
+            catch (Exception)
             {
                 MessageBox.Show("Can't save file");
             }
