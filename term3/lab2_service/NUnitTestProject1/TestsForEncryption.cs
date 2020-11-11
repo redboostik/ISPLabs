@@ -14,39 +14,39 @@ namespace NUnitTestProject1
         [Test]
         public void Test1()
         {
-            string s = "test string";
-            Encryption enc = new Encryption();
-            string s1 = enc.encryption(s);
-            Assert.True(enc.encryption(s1) == s, "method encription: wrong answer");
+            var s = "test string";
+            var enc = new Encryption();
+            var s1 = enc.Encrypt(s);
+            Assert.True(enc.Encrypt(s1) == s, "method encription: wrong answer");
         }
         [Test]
         public void Test2()
         {
-            string s = null;
-            Encryption enc = new Encryption();
-            string s1 = enc.encryption(s);
-            Assert.True(enc.encryption(s1) == s, "method encription: wrong answer");
+            var s = "";
+            var enc = new Encryption();
+            var s1 = enc.Encrypt(s);
+            Assert.True(enc.Encrypt(s1) == s, "method encription: wrong answer");
         }
         [Test]
         public void Test3()
         {
-            StringBuilder sb = new StringBuilder();
-            for(int i = 0; i < 1e6; i++)
+            var sb = new StringBuilder();
+            for(var i = 0; i < 1e6; i++)
             {
                 sb.Append("qwe");
             }
-            string s = sb.ToString();
-            Encryption enc = new Encryption();
-            string s1 = enc.encryption(s);
-            Assert.True(enc.encryption(s1) == s, "method encription: wrong answer");
+            var s = sb.ToString();
+            var enc = new Encryption();
+            var s1 = enc.Encrypt(s);
+            Assert.True(enc.Encrypt(s1) == s, "method encription: wrong answer");
         }
         [Test]
         public void Test4()
         {
-            string s = "";
-            Encryption enc = new Encryption();
-            string s1 = enc.encryption(s);
-            Assert.True(enc.encryption(s1) == s, "method encription: wrong answer");
+            var s = "";
+            var enc = new Encryption();
+            var s1 = enc.Encrypt(s);
+            Assert.True(enc.Encrypt(s1) == s, "method encription: wrong answer");
         }
     }
 }

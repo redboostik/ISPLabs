@@ -21,11 +21,11 @@ namespace lab2_service
             string compressPath = path.Remove(path.Length - 3, 3) + "gz";
             if (File.Exists(path))
             {
-                    using (FileStream sourceStream = new FileStream(path, FileMode.OpenOrCreate))
+                    using (var sourceStream = new FileStream(path, FileMode.OpenOrCreate))
                     {
-                        using (FileStream targetStream = File.Create(compressPath))
+                        using (var targetStream = File.Create(compressPath))
                         {
-                            using (GZipStream compressionStream = new GZipStream(targetStream, CompressionMode.Compress))
+                            using (var compressionStream = new GZipStream(targetStream, CompressionMode.Compress))
                             {
                                 sourceStream.CopyTo(compressionStream);
                             }
@@ -36,15 +36,15 @@ namespace lab2_service
         }
         public string Decompressing()
         {
-            string decompressPath = path.Remove(path.Length - 2, 2) + "txt";
+            var decompressPath = path.Remove(path.Length - 2, 2) + "txt";
 
             if (File.Exists(path))
             {
-                    using (FileStream sourceStream = new FileStream(path, FileMode.OpenOrCreate))
+                    using (var sourceStream = new FileStream(path, FileMode.OpenOrCreate))
                     {
-                        using (FileStream targetStream = File.Create(decompressPath))
+                        using (var targetStream = File.Create(decompressPath))
                         {
-                            using (GZipStream decompressionStream = new GZipStream(sourceStream, CompressionMode.Decompress))
+                            using (var decompressionStream = new GZipStream(sourceStream, CompressionMode.Decompress))
                             {
                                 decompressionStream.CopyTo(targetStream);
                             }

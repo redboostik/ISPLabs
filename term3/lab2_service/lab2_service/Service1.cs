@@ -23,7 +23,7 @@ namespace lab2_service
         protected override void OnStart(string[] args)
         {
             LoadInfo();
-            Timer myTimer = new Timer(1000);
+            var myTimer = new Timer(1000);
             myTimer.Elapsed += new ElapsedEventHandler(MyTimer_Elapsed);
             myTimer.Enabled = true;
         }
@@ -34,11 +34,11 @@ namespace lab2_service
         }
         static void MyTimer_Elapsed(object sender, ElapsedEventArgs e)
         {
-            string pathSourse = "C:\\SourceDirectory";
-            string[] dirs = Directory.GetFiles(pathSourse);
+            var pathSourse = "C:\\SourceDirectory";
+            var dirs = Directory.GetFiles(pathSourse);
             foreach (var s in dirs)
             {
-                string ss;
+                var ss = "";
                 if (!dict.ContainsKey(s))
                 {
                     dict.Add(s, true);
@@ -55,23 +55,23 @@ namespace lab2_service
                             Directory.CreateDirectory(fold);
                         }
                     }
-                    FileStream sStream = new FileStream(s, FileMode.Open);
-                    FileStream tStream = File.Create(ss);
+                    var sStream = new FileStream(s, FileMode.Open);
+                    var tStream = File.Create(ss);
                     sStream.CopyTo(tStream);
                     sStream.Close();
                     tStream.Close();
-                    FileStream sourceStream = new FileStream(ss, FileMode.OpenOrCreate);
+                    var sourceStream = new FileStream(ss, FileMode.OpenOrCreate);
                     sourceStream.Read(array, 0, array.Length);
-                    int iterator = 0;
                     sourceStream.Close();
 
+                    int iterator = 0;
                     while (array[iterator] != (char)0) iterator++;
-                    Encryption secret = new Encryption();
-                    byte[] buffer = Encoding.ASCII.GetBytes(secret.Encrypt(Encoding.UTF8.GetString(array, 0, iterator)));
-                    FileStream sS = new FileStream(ss, FileMode.Create);
+                    var secret = new Encryption();
+                    var buffer = Encoding.ASCII.GetBytes(secret.Encrypt(Encoding.UTF8.GetString(array, 0, iterator)));
+                    var sS = new FileStream(ss, FileMode.Create);
                     sS.Write(buffer, 0, buffer.Length);
                     sS.Close();
-                    Archivator arch = new Archivator(ss);
+                    var arch = new Archivator(ss);
                     arch.Compressing();
                 }
             }
