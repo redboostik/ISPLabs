@@ -16,7 +16,7 @@ namespace lab2_service
             path = s;
         }
 
-        public string compressing()
+        public string Compressing()
         {
             string compressPath = path.Remove(path.Length - 3, 3) + "gz";
             if (File.Exists(path))
@@ -34,7 +34,7 @@ namespace lab2_service
             }
             return compressPath;
         }
-        public string decompressing()
+        public string Decompressing()
         {
             string decompressPath = path.Remove(path.Length - 2, 2) + "txt";
 

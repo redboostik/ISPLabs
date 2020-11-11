@@ -14,18 +14,18 @@ namespace lab2_service
         {
             key = b;
         }
-        public string encryption<T>(T text)
+        public string Encrypt<T>(T text)
         {
             if (text == null) return "";
             char[] textChar = text.ToString().ToCharArray();
             for (int i = 0; i < textChar.Length; i++)
             {
-                textChar[i] = secret(textChar[i]);
+                textChar[i] = Secret(textChar[i]);
             }
 
             return new String(textChar);
         }
-        private char secret(char c)
+        private char Secret(char c)
         {
             return (char)(key ^ (byte)(c));
         }

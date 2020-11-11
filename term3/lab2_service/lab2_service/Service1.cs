@@ -22,17 +22,17 @@ namespace lab2_service
 
         protected override void OnStart(string[] args)
         {
-            loadInfo();
+            LoadInfo();
             Timer myTimer = new Timer(1000);
-            myTimer.Elapsed += new ElapsedEventHandler(myTimer_Elapsed);
+            myTimer.Elapsed += new ElapsedEventHandler(MyTimer_Elapsed);
             myTimer.Enabled = true;
-            pushInfo();
         }
 
         protected override void OnStop()
         {
+            PushInfo();
         }
-        static void myTimer_Elapsed(object sender, ElapsedEventArgs e)
+        static void MyTimer_Elapsed(object sender, ElapsedEventArgs e)
         {
             string pathSourse = "C:\\SourceDirectory";
             string[] dirs = Directory.GetFiles(pathSourse);
@@ -67,17 +67,17 @@ namespace lab2_service
 
                     while (array[iterator] != (char)0) iterator++;
                     Encryption secret = new Encryption();
-                    byte[] buffer = Encoding.ASCII.GetBytes(secret.encryption(Encoding.UTF8.GetString(array, 0, iterator)));
+                    byte[] buffer = Encoding.ASCII.GetBytes(secret.Encrypt(Encoding.UTF8.GetString(array, 0, iterator)));
                     FileStream sS = new FileStream(ss, FileMode.Create);
                     sS.Write(buffer, 0, buffer.Length);
                     sS.Close();
                     Archivator arch = new Archivator(ss);
-                    arch.compressing();
+                    arch.Compressing();
                 }
             }
         }
 
-        static void loadInfo()
+        static void LoadInfo()
         {
             string path = "C:\\TargetDirectory\\base.info";
             FileStream sourceStream = new FileStream(path, FileMode.OpenOrCreate);
@@ -100,7 +100,7 @@ namespace lab2_service
                 Console.WriteLine("Loading failed");
             }
         }
-        static void pushInfo()
+        static void PushInfo()
         {
             string path = "C:\\TargetDirectory\\base.info";
             string s = "";

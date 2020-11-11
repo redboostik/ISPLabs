@@ -17,7 +17,7 @@ namespace NUnitTestProject1
         {
             string path = "1.txt";
             Archivator arch = new Archivator(path);
-            TestDelegate t = () => arch.compressing();
+            TestDelegate t = () => arch.Compressing();
             Assert.DoesNotThrow(t, "File not Exists check");
         }
         [Test]
@@ -25,7 +25,7 @@ namespace NUnitTestProject1
         {
             string path = "1.txt";
             Archivator arch = new Archivator(path);
-            TestDelegate t = () => arch.compressing();
+            TestDelegate t = () => arch.Compressing();
             Assert.DoesNotThrow(t, "File not Exists check");
         }
         [Test]
@@ -35,7 +35,7 @@ namespace NUnitTestProject1
             FileStream tStream = File.Create(path);
             tStream.Close();
             Archivator arch = new Archivator(path);
-            TestDelegate t = () => arch.compressing();
+            TestDelegate t = () => arch.Compressing();
             Assert.DoesNotThrow(t);
             File.Delete(path);
         }
