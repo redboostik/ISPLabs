@@ -15,15 +15,17 @@ namespace NUnitTestProject1
         public void Test1()
         {
             string s = "test string";
-            string s1 = Encryption.encryption(s);
-            Assert.True(Encryption.encryption(s1) == s, "method encription: wrong answer");
+            Encryption enc = new Encryption();
+            string s1 = enc.encryption(s);
+            Assert.True(enc.encryption(s1) == s, "method encription: wrong answer");
         }
         [Test]
         public void Test2()
         {
             string s = null;
-            string s1 = Encryption.encryption(s);
-            Assert.True(Encryption.encryption(s1) == s, "method encription: wrong answer");
+            Encryption enc = new Encryption();
+            string s1 = enc.encryption(s);
+            Assert.True(enc.encryption(s1) == s, "method encription: wrong answer");
         }
         [Test]
         public void Test3()
@@ -34,15 +36,17 @@ namespace NUnitTestProject1
                 sb.Append("qwe");
             }
             string s = sb.ToString();
-            string s1 = Encryption.encryption(s);
-            Assert.True(Encryption.encryption(s1) == s, "method encription: wrong answer");
+            Encryption enc = new Encryption();
+            string s1 = enc.encryption(s);
+            Assert.True(enc.encryption(s1) == s, "method encription: wrong answer");
         }
         [Test]
         public void Test4()
         {
             string s = "";
-            string s1 = Encryption.encryption(s);
-            Assert.True(Encryption.encryption(s1) == s, "method encription: wrong answer");
+            Encryption enc = new Encryption();
+            string s1 = enc.encryption(s);
+            Assert.True(enc.encryption(s1) == s, "method encription: wrong answer");
         }
     }
 }

@@ -1,18 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace lab2_service
 {
     public class Encryption
     {
-        private static byte key = 228;
-        static public string encryption(string text)
+        private byte key = 228;
+
+        public Encryption()
         {
-            if (text == null) return null;
-            char[] textChar = text.ToCharArray();
+
+        }
+        public Encryption(byte b)
+        {
+            key = b;
+        }
+        public string encryption<T>(T text)
+        {
+            if (text == null) return "";
+            char[] textChar = text.ToString().ToCharArray();
             for (int i = 0; i < textChar.Length; i++)
             {
                 textChar[i] = secret(textChar[i]);
@@ -20,7 +25,7 @@ namespace lab2_service
 
             return new String(textChar);
         }
-        private static char secret(char c)
+        private char secret(char c)
         {
             return (char)(key ^ (byte)(c));
         }

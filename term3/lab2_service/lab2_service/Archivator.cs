@@ -10,14 +10,17 @@ namespace lab2_service
 {
     public class Archivator
     {
-        public static string compressing(string path)
+        private string path;
+        public Archivator(string s)
         {
+            path = s;
+        }
 
+        public string compressing()
+        {
             string compressPath = path.Remove(path.Length - 3, 3) + "gz";
             if (File.Exists(path))
             {
-                try
-                {
                     using (FileStream sourceStream = new FileStream(path, FileMode.OpenOrCreate))
                     {
                         using (FileStream targetStream = File.Create(compressPath))
@@ -28,26 +31,15 @@ namespace lab2_service
                             }
                         }
                     }
-                }
-                catch (Exception ee)
-                {
-                    return null;
-                }
-            }
-            else
-            {
-                return null;
             }
             return compressPath;
         }
-        public static string decompressing(string path)
+        public string decompressing()
         {
             string decompressPath = path.Remove(path.Length - 2, 2) + "txt";
 
             if (File.Exists(path))
             {
-                try
-                {
                     using (FileStream sourceStream = new FileStream(path, FileMode.OpenOrCreate))
                     {
                         using (FileStream targetStream = File.Create(decompressPath))
@@ -58,15 +50,6 @@ namespace lab2_service
                             }
                         }
                     }
-                }
-                catch (Exception ee)
-                {
-                    return null;
-                }
-            }
-            else
-            {
-                return null;
             }
             return decompressPath;
 

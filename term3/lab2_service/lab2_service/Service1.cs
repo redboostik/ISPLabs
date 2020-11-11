@@ -66,11 +66,13 @@ namespace lab2_service
                     sourceStream.Close();
 
                     while (array[iterator] != (char)0) iterator++;
-                    byte[] buffer = Encoding.ASCII.GetBytes(Encryption.encryption(Encoding.UTF8.GetString(array, 0, iterator)));
+                    Encryption secret = new Encryption();
+                    byte[] buffer = Encoding.ASCII.GetBytes(secret.encryption(Encoding.UTF8.GetString(array, 0, iterator)));
                     FileStream sS = new FileStream(ss, FileMode.Create);
                     sS.Write(buffer, 0, buffer.Length);
                     sS.Close();
-                    Archivator.compressing(ss);
+                    Archivator arch = new Archivator(ss);
+                    arch.compressing();
                 }
             }
         }
