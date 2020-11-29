@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+    <SourceDirPath>C:\\SourceDirectory</SourceDirPath>
+	<TargetDitPath>C:\\TargetDirectory</TargetDitPath>
+	<DBPath>C:\\TargetDirectory\\base.info</DBPath>
+	<RefreshTime>1000</RefreshTime>
+</data>

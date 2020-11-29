@@ -1,0 +1,6 @@
+{
+  "SourceDirPath": "C:\\SourceDirectory",
+  "TargetDitPath": "C:\\TargetDirectory",
+  "DBPath": "C:\\TargetDirectory\\base.info",
+  "RefreshTime": 1000
+}
