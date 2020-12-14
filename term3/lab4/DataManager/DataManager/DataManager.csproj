@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="DataAccessLayer">
+      <HintPath>..\..\DataAccessLayer\DataAccessLayer\bin\Debug\DataAccessLayer.dll</HintPath>
+    </Reference>
+    <Reference Include="IXmlGeneratorService">
+      <HintPath>..\..\IXmlGeneratorService\IXmlGeneratorService\bin\Debug\IXmlGeneratorService.dll</HintPath>
+    </Reference>
+    <Reference Include="Models">
+      <HintPath>..\..\Models\Models\bin\Debug\Models.dll</HintPath>
+    </Reference>
+    <Reference Include="OptionsManager">
+      <HintPath>..\..\OptionsManager\OptionsManager\bin\Debug\OptionsManager.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
