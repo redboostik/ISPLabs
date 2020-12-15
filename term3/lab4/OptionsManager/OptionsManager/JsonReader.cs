@@ -1,44 +1,31 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Text.Json;
-
-using System.Threading.Tasks;
+using Newtonsoft.Json.Linq;
 
 namespace OptionsManager
 {
     public class JsonReader
     {
-            
-        Dictionary<string, object> info;
+        JObject info;
         public JsonReader(string path)
         {
 
-            string text = "";
-            using (FileStream fstream = File.OpenRead(path))
-            {
-                byte[] array = new byte[fstream.Length];
-                fstream.Read(array, 0, array.Length);
-                text = Encoding.UTF8.GetString(array);
-            }
-            info = ToObj<Dictionary<string, object>>(text);
-
+            string text = File.ReadAllText(path);
+                info = JObject.Parse(text);
         }
 
         public T GetElement<T>(string element)
         {
-            return ToObj<T>(info[element].ToString());
+            JToken tok = info[element];
+
+            return tok.ToObject<T>();
         }
-
-
-        private static T ToObj<T>(string textJson)
+        public static T ToObj<T>(string text)
         {
-
-            return JsonSerializer.Deserialize<T>(textJson);
+            return JObject.Parse(text).ToObject<T>();
         }
 
-    }
+    }   
 }
